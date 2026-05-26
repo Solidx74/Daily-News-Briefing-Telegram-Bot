@@ -259,7 +259,6 @@ def trigger_brief():
     success, tg_result = send_to_telegram(briefing, tg_token, tg_chat_id)
     if success:
         # CLEAN FIX: Pass back a lightweight confirmation. 
-        # Do not include 'tg_result' which contains the full duplicate news text.
         return jsonify({
             "status": "success",
             "message": "Morning news briefing successfully compiled and sent to Telegram."
